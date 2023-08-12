@@ -79,6 +79,7 @@ class BankAccount:
         else:
             print('Invalid name or pin!!!')
             BankAccount.register(self)
+            #Registraion of new customer and login
     def register(self):
         print('\n\n____JANDHAN BANK____')
         print('Your personal financial partner')
@@ -91,6 +92,7 @@ class BankAccount:
             print('note the pin, it will help you further communication with us.\nDo not share it anyone!!')
             self.pin=int(input('Enter six digit pin:'))
             print(f'Account created successfully\nYour Account Number is{self.cust_acc_no}')
+            self.acc_balance=0
             print(f'\nWelcome {self.name}')
             print('loging to JANDHAN BANk using name&pin')
             self.cust_acc_no=self.cust_acc_no+1
@@ -106,10 +108,10 @@ class BankAccount:
 if __name__=='__main__':
     c = BankAccount('Radha', 300, 98767898, 234561, 'bombay')
     v=BankAccount('seema',400,989786787,123456,'New delhi')
-    c.payment(v)
-    #d=input('could you like to enter JANDHAN BANK online service\nif YES press 1 if NO press any key ')
-    #if d=='1':
+    #c.payment(v)
+    d=input('could you like to enter JANDHAN BANK online service\nif YES press 1 if NO press any key ')
+    if d=='1':
 
-        #print(BankAccount.register(c))
+        print(BankAccount.register(c))
     #
 
