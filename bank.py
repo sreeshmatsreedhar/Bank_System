@@ -69,6 +69,7 @@ class BankAccount:
             BankAccount.my_choice(self)
         elif a == 6:
             BankAccount.logout(self)
+#for login already registered customer
     def login(self):
         print('\n>>>>Login<<<<\n')
         user=input("Enter your name as per registered:")
